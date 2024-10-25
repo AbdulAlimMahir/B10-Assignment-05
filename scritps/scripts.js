@@ -9,7 +9,7 @@
 // }
 console.log("scripts.js added");
 function redirectBlog() {
-  window.location.href = "../blog.html";
+  window.location.href = "./blog.html";
 }
 function redirectHome() {
   window.location.href = "../index.html";
