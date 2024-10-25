@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>Donate Bangladesh | Module-29 Assignment 05</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .qa {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body class="bg-white h-dvh text-black static">
+    <main class="bg-[#F9F7F3] py-8 sticky top-0 z-50">
+      <header class="flex justify-evenly">
+        <button
+          class="btn btn-success text-xl w-24 px-12 bg-[#B4F416] border-none"
+        >
+          Home
+        </button>
+        <div class="logo flex px-16">
+          <img
+            class="px-4"
+            src="images/logo.png"
+            alt="Logo"
+          />
+          <h1 class="text-3xl font-semibold">Donate Bangladesh</h1>
+        </div>
+        <div class="currency font-semibold flex">
+          <img
+            src="images/coin.png"
+            alt="Coins"
+          />
+          <span class="text-2xl text-gray-600 w-64 pl-2 pt-2">5500 BDT</span>
+        </div>
+      </header>
+    </main>
+    <div class="qa w-[75%] flex flex-col my-16">
+      <div
+        class="collapse collapse-plus bg-white border-[1px] border-gray-300 my-2 p-4"
+      >
+        <input
+          type="radio"
+          name="my-accordion-3"
+          checked="checked"
+        />
+        <div class="collapse-title text-xl font-medium">
+          What is the Document Object Model (DOM)?
+        </div>
+        <div class="collapse-content">
+          <p>
+            DOM stands for Document Object Model, is a way to do different
+            operations on HTML elements. Such as: updating, fetching or reading,
+            deleting or creatinig new attributes and styles of any HTML
+            elements. It's a general way or method to manipulate HTML's
+            different objects.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-plus bg-white border-[1px] border-gray-300 my-2 p-4"
+      >
+        <input
+          type="radio"
+          name="my-accordion-3"
+        />
+        <div class="collapse-title text-xl font-medium">
+          How do you select an object from DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            There are different kind of selector for different scinarios. Like
+            we can select a unique object with it's id's using getElementById(),
+            or selecting a group of objects by their classes using
+            getElementsByClassName, or selecting various HTML tag or tags using
+            getElementByTagName() etc. Also we can use DOM for CSS manipulation
+            too, using querySelector() to select the first css query, or using
+            querySelectorAll() to select all those similar CSS Queries.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-plus bg-white border-[1px] border-gray-300 my-2 p-4"
+      >
+        <input
+          type="radio"
+          name="my-accordion-3"
+        />
+        <div class="collapse-title text-xl font-medium">
+          What is an event delegation in the context of DOM, and why is it
+          useful?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Event Delegation is a level-based pattern of handling events in DOM.
+            It works in levels of elements like parent, child, grandchild etc
+            elements.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-plus bg-white border-[1px] border-gray-300 my-2 p-4"
+      >
+        <input
+          type="radio"
+          name="my-accordion-3"
+        />
+        <div class="collapse-title text-xl font-medium">
+          How do you manipulate and element's attributes and styles using the
+          DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            After selecting an element's attributes or styles we can use CSS
+            property names in JS to manipulate them. But as JS does't like "-"
+            sign, we use camel-case to select them, like camelCase. If we want
+            to change background-color of an element, after selecting that
+            element we can use ".styles.backgroundColor: black" to change it to
+            black. Same applies for other CSS styles.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
