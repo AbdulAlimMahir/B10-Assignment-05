@@ -38,6 +38,7 @@
       <header class="flex justify-evenly">
         <button
           class="btn btn-success text-xl w-24 px-12 bg-[#B4F416] border-none"
+          onclick="redirectBlog()"
         >
           Blog
         </button>
@@ -58,24 +59,29 @@
         </div>
       </header>
     </main>
-    <div class="">
+    <div class="page pb-16">
       <div
         class="bg-white options flex justify-center py-8 sticky top-[112px] z-50"
       >
         <button
-          class="btn btn-success text-xl w-24 bg-[#B4F416] border-none px-16 font-semibold mx-4"
+          id="toggleDonation"
+          class="btn text-xl w-24 px-16 mx-4 font-semibold border-[1px] border-gray-100 hover:bg-green-200 text-black bg-[#B4F416]"
         >
           Donation
         </button>
         <button
-          class="btn text-xl w-24 text-gray-500 px-16 mx-4 font-semibold bg-white border-[1px] border-gray-500 hover:border-[#B4F416] hover:bg-white hover:text-black"
+          id="toggleHistory"
+          class="btn text-xl w-24 px-16 mx-4 font-semibold border-[1px] border-gray-100 hover:bg-green-200 text-black bg-gray-100"
         >
           History
         </button>
       </div>
 
       <!-- Donation Page -->
-      <div class="donations flex flex-col">
+      <div
+        id="donationPage"
+        class="donations flex flex-col"
+      >
         <!-- Donation Post-01 -->
         <div
           class="card w-[75%] card-side hover:shadow-md border-[1px] border-gray-300 self-center my-6"
@@ -224,51 +230,59 @@
 
       <!-- History Page -->
       <div
-        class="notification w-[75%] border-[1px] border-gray-300 rounded-xl p-6"
+        id="historyPage"
+        class="history hidden pb-32"
       >
-        <h2 class="text-xl font-bold my-2">
-          <span id="amount">900</span> Taka was donated in
-          <span id="post-name">Donate for Flood at Noakhali, Bangladesh</span>
-        </h2>
-        <p>
-          Date:
-          <span id="date"
-            >Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</span
-          >
-        </p>
-      </div>
-      <div
-        class="notification w-[75%] border-[1px] border-gray-300 rounded-xl p-6"
-      >
-        <h2 class="text-xl font-bold my-2">
-          <span id="amount">900</span> Taka was donated in
-          <span id="post-name">Donate for Flood at Noakhali, Bangladesh</span>
-        </h2>
-        <p>
-          Date:
-          <span id="date"
-            >Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</span
-          >
-        </p>
-      </div>
-      <div
-        class="notification w-[75%] border-[1px] border-gray-300 rounded-xl p-6"
-      >
-        <h2 class="text-xl font-bold my-2">
-          <span id="amount">900</span> Taka was donated in
-          <span id="post-name">Donate for Flood at Noakhali, Bangladesh</span>
-        </h2>
-        <p>
-          Date:
-          <span id="date"
-            >Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</span
-          >
-        </p>
+        <div
+          class="notification w-[75%] border-[1px] border-gray-300 rounded-xl p-6"
+        >
+          <h2 class="text-xl font-bold my-2">
+            <span id="amount">900</span> Taka was donated in
+            <span id="post-name">Donate for Flood at Noakhali, Bangladesh</span>
+          </h2>
+          <p>
+            Date:
+            <span id="date"
+              >Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard
+              Time)</span
+            >
+          </p>
+        </div>
+        <div
+          class="notification w-[75%] border-[1px] border-gray-300 rounded-xl p-6"
+        >
+          <h2 class="text-xl font-bold my-2">
+            <span id="amount">900</span> Taka was donated in
+            <span id="post-name">Donate for Flood at Noakhali, Bangladesh</span>
+          </h2>
+          <p>
+            Date:
+            <span id="date"
+              >Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard
+              Time)</span
+            >
+          </p>
+        </div>
+        <div
+          class="notification w-[75%] border-[1px] border-gray-300 rounded-xl p-6"
+        >
+          <h2 class="text-xl font-bold my-2">
+            <span id="amount">900</span> Taka was donated in
+            <span id="post-name">Donate for Flood at Noakhali, Bangladesh</span>
+          </h2>
+          <p>
+            Date:
+            <span id="date"
+              >Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard
+              Time)</span
+            >
+          </p>
+        </div>
       </div>
     </div>
 
     <!-- Congratulation Alert -->
-    <div class="alert">
+    <div class="alert hidden">
       <div
         class="toast card p-8 w-[512px] h-[300px] bg-white flex rounded-xl border-[1px] border-gray-400 sticky"
       >
@@ -287,5 +301,6 @@
         </button>
       </div>
     </div>
+    <script src="scritps/scripts.js"></script>
   </body>
 </html>
