@@ -9,10 +9,10 @@
 // }
 console.log("scripts.js added");
 function redirectBlog() {
-  window.location.href = "./blog.html";
+  window.location.replace = "./blog.html";
 }
 function redirectHome() {
-  window.location.href = "../index.html";
+  window.location.replace = "../index.html";
 }
 const donation = document.getElementById("donationPage");
 const toggleDonation = document.getElementById("toggleDonation");
