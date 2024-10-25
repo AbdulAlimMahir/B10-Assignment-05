@@ -8,11 +8,11 @@
 //   }
 // }
 console.log("scripts.js added");
-function redirectBlog() {
-  window.location.replace = "../blog.html";
+function goBlog() {
+  window.location.href = "../blog.html";
 }
-function redirectHome() {
-  window.location.replace = "../index.html";
+function goHome() {
+  window.location.href = "../index.html";
 }
 const donation = document.getElementById("donationPage");
 const toggleDonation = document.getElementById("toggleDonation");
