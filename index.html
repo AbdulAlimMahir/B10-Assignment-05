@@ -43,13 +43,15 @@
             >Blog</a
           >
         </button>
-        <div class="logo flex px-16">
+        <div class="logo flex max-[425px]px-6 md:px-16">
           <img
             class="px-4"
             src="images/logo.png"
             alt="Logo"
           />
-          <h1 class="text-3xl font-semibold">Donate Bangladesh</h1>
+          <h1 class="max-[425px]text-xl md:text-3xl font-semibold">
+            Donate Bangladesh
+          </h1>
         </div>
         <div
           class="currency font-semibold flex bg-gray-50 border-2 border-white rounded-xl px-4 py-2"
@@ -95,14 +97,14 @@
         <div
           class="card w-[75%] card-side hover:shadow-md border-[1px] border-gray-300 self-center mb-8"
         >
-          <div class="p-8 w-2/5 float-left">
+          <div class="max-[425px]:p-4 md:p-8 max-[425px]:w-full md:w-2/5">
             <img
-              class="opacity-90 hover:opacity-100 w-[512px] h-auto"
+              class="opacity-90 hover:opacity-100 max-[425px]:w-full md:w-[512px] h-auto"
               src="images/noakhali.png"
               alt="Album"
             />
           </div>
-          <div class="card-body w-3/5 float-right px-0 pr-8 py-8">
+          <div class="card-body w-3/5 px-0 pr-8 py-8">
             <div
               class="flex w-max text-lg font-semibold bg-gray-100 border-[1px] border-gray-100 rounded-xl px-4 py-2"
             >
@@ -277,14 +279,14 @@
       >
         <div
           id="greets"
-          class="notification w-[75%] bg-gray-50 border-[1px] border-gray-300 rounded-xl p-6"
+          class="notification w-[80%] bg-gray-50 border-[1px] border-gray-300 rounded-xl mx-auto"
         >
-          <p class="text-xl font-bold">
+          <p class="text-xl font-bold p-6">
             <span id="txnamount">000</span> Taka was donated in
             <span id="post_name">Demo Testing Life, Bangladesh</span>
           </p>
-          <p>
-            Date:
+          <p class="bg-gray-200 p-2">
+            🕒
             <span id="date"> day month date year 24h timezone (country)</span>
           </p>
         </div>

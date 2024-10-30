@@ -34,7 +34,7 @@
       }
     </style>
   </head>
-  <body class="bg-white h-dvh text-black static">
+  <body class="bg-white h-[100%] text-black static">
     <main class="bg-[#F9F7F3] py-6 sticky top-0 z-50">
       <header class="flex justify-evenly">
         <button class="btn btn-success text-xl w-24 bg-[#B4F416] border-none">
@@ -44,13 +44,15 @@
             >Home</a
           >
         </button>
-        <div class="logo flex px-16">
+        <div class="logo flex max-[425px]:px-6 md:px-16">
           <img
             class="px-4"
             src="images/logo.png"
             alt="Logo"
           />
-          <h1 class="text-3xl font-semibold">Donate Bangladesh</h1>
+          <h1 class="max-[425px]:text-xl md:text-3xl font-semibold">
+            Donate Bangladesh
+          </h1>
         </div>
         <div
           class="currency font-semibold flex bg-gray-50 border-2 border-white rounded-xl px-4 py-2"
@@ -66,7 +68,7 @@
         </div>
       </header>
     </main>
-    <div class="qa w-[75%] flex flex-col my-16">
+    <div class="qa w-[80%] flex flex-col max-[425px]:my-6 md:my-16">
       <div
         class="collapse collapse-plus bg-white border-[1px] border-gray-300 my-2 p-4"
       >
