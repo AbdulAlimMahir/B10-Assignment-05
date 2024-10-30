@@ -34,14 +34,14 @@
     </style>
   </head>
   <body class="bg-white text-black">
-    <main class="bg-[#F9F7F3] py-8 sticky top-0 z-50">
+    <main class="bg-[#F9F7F3] py-6 sticky top-0 z-50">
       <header class="flex justify-evenly">
-        <button
-          id="goBlog"
-          class="btn btn-success text-xl w-24 px-12 bg-[#B4F416] border-none"
-          onclick="goBlog()"
-        >
-          Blog
+        <button class="btn btn-success text-xl w-24 bg-[#B4F416] border-none">
+          <a
+            class="px-12"
+            href="/blog.html"
+            >Blog</a
+          >
         </button>
         <div class="logo flex px-16">
           <img
@@ -51,28 +51,36 @@
           />
           <h1 class="text-3xl font-semibold">Donate Bangladesh</h1>
         </div>
-        <div class="currency font-semibold flex">
+        <div
+          class="currency font-semibold flex bg-gray-50 border-2 border-white rounded-xl px-4 py-2"
+        >
           <img
+            class="mr-2"
             src="images/coin.png"
             alt="Coins"
           />
-          <span class="text-2xl text-gray-600 w-64 pl-2 pt-2">5500 BDT</span>
+          <div class="flex w-max text-lg font-semibold">
+            <span id="balance">5500</span>
+          </div>
         </div>
       </header>
     </main>
-    <div class="page pb-16">
+    <div
+      id="page"
+      class="pb-16"
+    >
       <div
-        class="bg-white options flex justify-center py-8 sticky top-[112px] z-50"
+        class="bg-white/30 options flex justify-center py-8 sticky top-[96px] z-50 backdrop-blur-sm"
       >
         <button
           id="toggleDonation"
-          class="btn text-xl w-24 px-16 mx-4 font-semibold border-[1px] border-gray-100 hover:bg-green-200 text-black bg-[#B4F416]"
+          class="btn text-xl w-24 px-16 mx-4 font-semibold bg-[#B4F416] border-none text-black hover:bg-[#B4F416]"
         >
           Donation
         </button>
         <button
           id="toggleHistory"
-          class="btn text-xl w-24 px-16 mx-4 font-semibold border-[1px] border-gray-100 hover:bg-green-200 text-black bg-gray-100"
+          class="btn text-xl w-24 px-16 mx-4 font-semibold bg-gray-50 border-none border-gray-50 hover:bg-gray-200 text-black"
         >
           History
         </button>
@@ -85,7 +93,7 @@
       >
         <!-- Donation Post-01 -->
         <div
-          class="card w-[75%] card-side hover:shadow-md border-[1px] border-gray-300 self-center my-6"
+          class="card w-[75%] card-side hover:shadow-md border-[1px] border-gray-300 self-center mb-8"
         >
           <div class="p-8 w-2/5 float-left">
             <img
@@ -95,16 +103,23 @@
             />
           </div>
           <div class="card-body w-3/5 float-right px-0 pr-8 py-8">
-            <button
-              class="flex w-40 text-base font-semibold px-4 py-2 bg-gray-100 border-[1px] border-gray-100 rounded-xl"
+            <div
+              class="flex w-max text-lg font-semibold bg-gray-100 border-[1px] border-gray-100 rounded-xl px-4 py-2"
             >
               <img
-                class="mr-2"
+                class="mr-2 w-8 h-8"
                 src="images/coin.png"
                 alt=""
-              />1000 BDT
-            </button>
-            <h2 class="card-title text-2xl font-semibold py-2">
+              /><span
+                id="piggy_bank_1"
+                class=""
+                >700</span
+              >
+            </div>
+            <h2
+              id="pid_1"
+              class="card-title text-2xl font-semibold py-2"
+            >
               Donate for Flood at Noakhali, Bangladesh
             </h2>
             <p>
@@ -118,11 +133,15 @@
               give hands to each other and help.
             </p>
             <input
-              type="number"
+              id="donation_amount_1"
+              type="text"
               placeholder="Donation Amount"
               class="input input-bordered p-6 my-4 bg-white hover:border-[#B4F416]"
             />
             <button
+              type="button"
+              id="donate_button"
+              onclick="util('donation_amount_1','pid_1','piggy_bank_1')"
               class="btn w-full bg-[#B4F416] hover:bg-[#70cc4c] text-black font-semibold border-none"
             >
               Donate Now
@@ -132,7 +151,7 @@
 
         <!-- Donation Post-02 -->
         <div
-          class="card w-[75%] card-side hover:shadow-md border-[1px] border-gray-300 self-center my-6"
+          class="card w-[75%] card-side hover:shadow-md border-[1px] border-gray-300 self-center mb-8"
         >
           <div class="p-8 w-2/5 float-left">
             <img
@@ -142,16 +161,23 @@
             />
           </div>
           <div class="card-body w-3/5 float-right px-0 pr-8 py-8">
-            <button
-              class="flex w-40 text-base font-semibold px-4 py-2 bg-gray-100 border-[1px] border-gray-100 rounded-xl"
+            <div
+              class="flex w-max text-lg font-semibold bg-gray-100 border-[1px] border-gray-100 rounded-xl px-4 py-2"
             >
               <img
-                class="mr-2"
+                class="mr-2 w-8 h-8"
                 src="images/coin.png"
                 alt=""
-              />1700 BDT
-            </button>
-            <h2 class="card-title text-2xl font-semibold py-2">
+              /><span
+                id="piggy_bank_2"
+                class=""
+                >1700</span
+              >
+            </div>
+            <h2
+              id="pid_2"
+              class="card-title text-2xl font-semibold py-2"
+            >
               Donate for Flood Releif at Feni, Bangladesh
             </h2>
             <p>
@@ -167,11 +193,15 @@
               hands to each other and help.
             </p>
             <input
-              type="number"
+              id="donation_amount_2"
+              type="text"
               placeholder="Donation Amount"
               class="input input-bordered p-6 my-4 bg-white hover:border-[#B4F416]"
             />
             <button
+              type="button"
+              id="donate_button_2"
+              onclick="util('donation_amount_2','pid_2','piggy_bank_2')"
               class="btn w-full bg-[#B4F416] hover:bg-[#70cc4c] text-black font-semibold border-none"
             >
               Donate Now
@@ -181,7 +211,7 @@
 
         <!-- Donation Post-03 -->
         <div
-          class="card w-[75%] card-side hover:shadow-md border-[1px] border-gray-300 self-center my-6"
+          class="card w-[75%] card-side hover:shadow-md border-[1px] border-gray-300 self-center mb-8"
         >
           <div class="p-8 w-2/5 float-left">
             <img
@@ -191,16 +221,23 @@
             />
           </div>
           <div class="card-body w-3/5 float-right px-0 pr-8 py-8">
-            <button
-              class="flex w-40 text-base font-semibold px-4 py-2 bg-gray-100 border-[1px] border-gray-100 rounded-xl"
+            <div
+              class="flex w-max text-lg font-semibold bg-gray-100 border-[1px] border-gray-100 rounded-xl px-4 py-2"
             >
               <img
-                class="mr-2"
+                class="mr-2 w-8 h-8"
                 src="images/coin.png"
                 alt=""
-              />3500 BDT
-            </button>
-            <h2 class="card-title text-2xl font-semibold py-2">
+              /><span
+                id="piggy_bank_3"
+                class=""
+                >2700</span
+              >
+            </div>
+            <h2
+              id="pid_3"
+              class="card-title text-2xl font-semibold py-2"
+            >
               Aid for Injured in the Quota Movement
             </h2>
             <p>
@@ -216,11 +253,15 @@
               need our help now more than ever. Don't let them feel left alone.
             </p>
             <input
-              type="number"
+              id="donation_amount_3"
+              type="text"
               placeholder="Donation Amount"
               class="input input-bordered p-6 my-4 bg-white hover:border-[#B4F416]"
             />
             <button
+              type="button"
+              id="donate_button_3"
+              onclick="util('donation_amount_3','pid_3','piggy_bank_3')"
               class="btn w-full bg-[#B4F416] hover:bg-[#70cc4c] text-black font-semibold border-none"
             >
               Donate Now
@@ -232,76 +273,50 @@
       <!-- History Page -->
       <div
         id="historyPage"
-        class="history hidden pb-32"
+        class="history hidden pb-32 h-screen"
       >
         <div
-          class="notification w-[75%] border-[1px] border-gray-300 rounded-xl p-6"
+          id="greets"
+          class="notification w-[75%] bg-gray-50 border-[1px] border-gray-300 rounded-xl p-6"
         >
-          <h2 class="text-xl font-bold my-2">
-            <span id="amount">900</span> Taka was donated in
-            <span id="post-name">Donate for Flood at Noakhali, Bangladesh</span>
-          </h2>
-          <p>
-            Date:
-            <span id="date"
-              >Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard
-              Time)</span
-            >
+          <p class="text-xl font-bold">
+            <span id="txnamount">000</span> Taka was donated in
+            <span id="post_name">Demo Testing Life, Bangladesh</span>
           </p>
-        </div>
-        <div
-          class="notification w-[75%] border-[1px] border-gray-300 rounded-xl p-6"
-        >
-          <h2 class="text-xl font-bold my-2">
-            <span id="amount">900</span> Taka was donated in
-            <span id="post-name">Donate for Flood at Noakhali, Bangladesh</span>
-          </h2>
           <p>
             Date:
-            <span id="date"
-              >Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard
-              Time)</span
-            >
-          </p>
-        </div>
-        <div
-          class="notification w-[75%] border-[1px] border-gray-300 rounded-xl p-6"
-        >
-          <h2 class="text-xl font-bold my-2">
-            <span id="amount">900</span> Taka was donated in
-            <span id="post-name">Donate for Flood at Noakhali, Bangladesh</span>
-          </h2>
-          <p>
-            Date:
-            <span id="date"
-              >Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard
-              Time)</span
-            >
+            <span id="date"> day month date year 24h timezone (country)</span>
           </p>
         </div>
       </div>
     </div>
 
     <!-- Congratulation Alert -->
-    <div class="alert hidden">
-      <div
-        class="toast card p-8 w-[512px] h-[300px] bg-white flex rounded-xl border-[1px] border-gray-400 sticky"
-      >
-        <h1 class="text-4xl font-bold self-center mb-4">Congrats</h1>
-        <div class="logo flex self-center">
-          <img
-            class="px-4"
-            src="images/coin.png"
-            alt="Logo"
-          />
-        </div>
-        <p class="self-center text-2xl">You have donated for Humankind</p>
-        <span class="self-center text-2xl font-semibold">Successfully</span>
-        <button class="btn btn-outline self-center mt-3">
-          close information
-        </button>
+    <div
+      id="toast"
+      class="hidden card w-[500px] h-[350px] p-8 bg-white rounded-xl border-[1px] border-gray-400 absolute top-1/3 left-1/3"
+    >
+      <h1 class="text-4xl font-bold self-center mx-4">Congrats</h1>
+      <div class="logo self-center">
+        <img
+          class="mx-auto my-4 h-[50px]"
+          src="images/coin.png"
+          alt="Logo"
+        />
+        <p class="self-center text-2xl text-center">
+          You have donated for Humankind
+        </p>
+        <p class="self-center text-2xl text-center font-bold">Successfully</p>
       </div>
+      <button
+        id="closeToast"
+        class="btn btn-outline self-center mt-6"
+      >
+        close information
+      </button>
     </div>
-    <script src="scritps/scripts.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/validate.js"></script>
+    <script src="scripts/transactions.js"></script>
   </body>
 </html>

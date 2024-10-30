@@ -35,14 +35,14 @@
     </style>
   </head>
   <body class="bg-white h-dvh text-black static">
-    <main class="bg-[#F9F7F3] py-8 sticky top-0 z-50">
+    <main class="bg-[#F9F7F3] py-6 sticky top-0 z-50">
       <header class="flex justify-evenly">
-        <button
-          id="goHome"
-          class="btn btn-success text-xl w-24 px-12 bg-[#B4F416] border-none"
-          onclick="goHome()"
-        >
-          Home
+        <button class="btn btn-success text-xl w-24 bg-[#B4F416] border-none">
+          <a
+            class="px-12"
+            href="/index.html"
+            >Home</a
+          >
         </button>
         <div class="logo flex px-16">
           <img
@@ -52,12 +52,17 @@
           />
           <h1 class="text-3xl font-semibold">Donate Bangladesh</h1>
         </div>
-        <div class="currency font-semibold flex">
+        <div
+          class="currency font-semibold flex bg-gray-50 border-2 border-white rounded-xl px-4 py-2"
+        >
           <img
+            class="mr-2"
             src="images/coin.png"
             alt="Coins"
           />
-          <span class="text-2xl text-gray-600 w-64 pl-2 pt-2">5500 BDT</span>
+          <div class="flex w-max text-lg font-semibold">
+            <span id="balance">5500</span>
+          </div>
         </div>
       </header>
     </main>
